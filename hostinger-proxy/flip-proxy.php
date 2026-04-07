@@ -11,7 +11,7 @@
  * 3. Add the same secret as FLIP_PROXY_SECRET in Lovable Cloud secrets
  * 4. Whitelist Hostinger's IP in Flip dashboard
  * 
- * URL will be: https://yourdomain.com/api/flip-proxy.php
+ * URL will be: https://jebox.zefin.id/api/flip-proxy.php
  */
 
 // ============================================================
