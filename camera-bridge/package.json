@@ -1,0 +1,15 @@
+{
+  "name": "zmi-camera-bridge",
+  "version": "1.0.0",
+  "description": "Camera bridge server for ZMI Photobox - Controls Canon DSLR via USB",
+  "scripts": {
+    "start:windows": "node bridge-windows.js",
+    "start:linux": "node bridge-linux.js",
+    "start": "node bridge-auto.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "sharp": "^0.33.2"
+  }
+}

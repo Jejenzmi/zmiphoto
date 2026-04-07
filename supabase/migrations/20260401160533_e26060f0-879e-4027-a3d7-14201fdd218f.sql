@@ -1,0 +1,1 @@
+ALTER TABLE public.templates ADD COLUMN slot_config jsonb DEFAULT NULL;

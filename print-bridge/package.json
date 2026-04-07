@@ -1,0 +1,19 @@
+{
+  "name": "zmi-print-bridge",
+  "version": "1.0.0",
+  "description": "Print bridge server for ZMI Photobox - Controls thermal and photo printers",
+  "scripts": {
+    "start:windows": "node bridge-windows.js",
+    "start:linux": "node bridge-linux.js",
+    "start": "node bridge-auto.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "sharp": "^0.33.2"
+  },
+  "optionalDependencies": {
+    "escpos": "^3.0.0-alpha.6",
+    "escpos-usb": "^3.0.0-alpha.4"
+  }
+}

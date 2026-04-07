@@ -1,0 +1,2 @@
+-- Add DSLR settings column to kiosks
+ALTER TABLE public.kiosks ADD COLUMN IF NOT EXISTS dslr_settings jsonb DEFAULT '{"iso": "400", "shutterspeed": "1/125", "aperture": "5.6", "whitebalance": "Auto", "imageQuality": "RAW+JPEG"}'::jsonb;

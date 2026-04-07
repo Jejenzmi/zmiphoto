@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&family=Dancing+Script:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 82%;
+    --foreground: 216 100% 20%;
+
+    --card: 0 0% 86%;
+    --card-foreground: 216 100% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 100% 20%;
+
+    --primary: 216 100% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 216 100% 33%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 78%;
+    --muted-foreground: 216 40% 45%;
+
+    --accent: 48 90% 62%;
+    --accent-foreground: 216 100% 20%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 60% 60%;
+    --input: 216 60% 60%;
+    --ring: 216 100% 33%;
+
+    --radius: 0.875rem;
+
+    --success: 152 60% 42%;
+    --warning: 38 92% 50%;
+    --info: 217 91% 60%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 20% 30%;
+    --sidebar-primary: 216 100% 33%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 220 25% 12%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 216 100% 33%;
+
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+    --font-script: 'Dancing Script', cursive;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply tracking-tight;
+  }
+  code, pre {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer utilities {
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/60 shadow-sm;
+  }
+  .glow-primary {
+    box-shadow: 0 4px 24px -4px hsl(var(--primary) / 0.15);
+  }
+  .glow-accent {
+    box-shadow: 0 4px 24px -4px hsl(var(--accent) / 0.15);
+  }
+  .card-elevated {
+    @apply bg-card border border-border/60 shadow-[0_1px_3px_0_hsl(220_13%_91%/0.5),0_4px_16px_-2px_hsl(220_13%_91%/0.3)];
+  }
+  .jebox-blue-bg {
+    background-color: hsl(216, 100%, 33%);
+  }
+  .jebox-gray-bg {
+    background-color: hsl(0, 0%, 82%);
+  }
+  .font-script {
+    font-family: var(--font-script);
+  }
+  .tracking-jebox {
+    letter-spacing: 0.25em;
+  }
+  .hand-drawn-border {
+    border: 2px solid hsl(var(--primary));
+    border-radius: 2px;
+  }
+  .browser-window {
+    border: 2px solid hsl(var(--primary));
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .browser-titlebar {
+    border-bottom: 2px solid hsl(var(--primary));
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 12s linear infinite;
+  }
+}
