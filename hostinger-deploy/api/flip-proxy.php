@@ -1,21 +1,19 @@
 <?php
 /**
- * Flip API Proxy - Deploy this file to Hostinger
+ * Flip API Proxy - Deploy to Hostinger
  * 
- * This proxy forwards requests from Lovable Cloud Edge Functions 
- * to the Flip API using Hostinger's whitelisted IP address.
+ * Path: public_html/api/flip-proxy.php
+ * URL:  https://jebox.zefin.id/api/flip-proxy.php
  * 
  * SETUP:
- * 1. Upload this file to your Hostinger hosting (e.g., public_html/api/flip-proxy.php)
- * 2. Set the PROXY_SECRET below to a strong random string
- * 3. Add the same secret as FLIP_PROXY_SECRET in Lovable Cloud secrets
- * 4. Whitelist Hostinger's IP in Flip dashboard
- * 
- * URL will be: https://yourdomain.com/api/flip-proxy.php
+ * 1. Upload seluruh isi folder hostinger-deploy/ ke public_html/
+ * 2. Ganti PROXY_SECRET di bawah dengan string random yang kuat
+ * 3. Tambahkan secret yang sama sebagai FLIP_PROXY_SECRET di Lovable Cloud
+ * 4. Whitelist IP Hostinger di dashboard Flip
  */
 
 // ============================================================
-// CONFIGURATION - Change these values
+// CONFIGURATION - Ganti nilai ini!
 // ============================================================
 define('PROXY_SECRET', 'CHANGE_THIS_TO_A_STRONG_RANDOM_SECRET');
 
