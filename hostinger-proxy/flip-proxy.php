@@ -17,7 +17,7 @@
 // ============================================================
 // CONFIGURATION - Change these values
 // ============================================================
-define('PROXY_SECRET', 'CHANGE_THIS_TO_A_STRONG_RANDOM_SECRET');
+define('PROXY_SECRET', '88f810acdb2dc44afaa971bf5008ee1c7e56dcd7aeff2d981776b2d8b3b0b766');
 
 // ============================================================
 // CORS & Preflight
